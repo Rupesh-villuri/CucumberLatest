@@ -1,0 +1,61 @@
+tags="@Smoke"
+will execute test cases with @smoke tag
+
+we can also run test cases with both smoke and regression tags with
+tags="@Regression or @smoke"
+
+we can apply tag at feature level also.
+i added @All at feature level , all the methods will inherit this all tag
+automatically it will be added to all methods in feature file
+
+To run from maven command 
+cmd-change directory 
+mvn test -it will pick all the test runners.
+it will work as tags defined in runner file in cucumber options
+
+if not specified , we can do from cmd also with cucumber 6
+if cucumber 4 we need to use cucumber options
+in cucumber 6 we use cucumber.filter
+
+mvn test -Cucumber.filter.tags="@smoke or @Regression"
+
+if we want to execute with test cases having both regression and smoke tags
+
+tags="@Regression and @smoke"
+
+we can also tag our user story id to the method
+
+@US-121
+
+
+
+Background : (As per cucumber official Doc)
+Occasionally you will find yourself repeating the same Given steps in all of the scenarios in a feature.
+since it is repeated in every scenario , this is an indication that those steps are not essential to describe the scenarios ;
+they are incidental details, you can move such given steps to the background by grouping them under a background section.
+
+A background allows you to add some context to the scenarios that follow it.it can contain one or more given steps,
+which are run before each scenario, but after any Before hooks.
+
+A Background is placed before the first scenario/Example ,at the same level of indentation.
+ 
+ 
+Cucumber Hooks :
+these are not part of feature file
+can be written in step definition class
+or can be written in seperate configuration class
+Hooks are setup and Teardown methods just like in TestNG/Junit
+
+hooks are annotated with
+ @Before - will be executed before each scenario
+ @After - will be executed after each scenario
+ 
+ @BeforeStep - will be executed before each step
+ @AfterStep  - will be executed after each step
+ 
+ can have multiple @Before or @After methods , but need to specify order
+ 
+ we can also annotate tags with hooks
+ @Before ("@Smoke") - this before will run before the scenarios which are tagged with smoke only
+ we can also specify with scenario object to identify for which method its running now.
+ 

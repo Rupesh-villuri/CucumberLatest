@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.464">
+<testcase classname="Amazon Search" name="search a product" time="0.154">
+<system-out><![CDATA[Given Amazon logins avaialble...............................................passed
+When enter "username" and "password"........................................passed
+When search for a product with price 2000 and enter.........................passed
+Then add to cart............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Amazon Search" name="Add a product" time="0.005">
+<system-out><![CDATA[Given Amazon logins avaialble...............................................passed
+When search for a product...................................................passed
+Then add to cart............................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

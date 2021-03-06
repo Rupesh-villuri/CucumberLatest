@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestRunner.AmazonTest
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 26.535 s <<< FAILURE! - in TestRunner.AmazonTest
+billing amount #1(Create Compant in CRM #1)  Time elapsed: 0.091 s  <<< ERROR!
+io.cucumber.core.runner.AmbiguousStepDefinitionsException: 
+"user enters tax amount 10" matches more than one step definition:
+  "user enters tax amount {double}" in stepdefinitions.AdactinLoginDefinitions.user_enters_tax_amount(java.lang.Double)
+  "user enters tax amount {int}" in stepdefinitions.AdactinLoginDefinitions.user_enters_tax_amount(java.lang.Integer)
+
+billing amount #2(Create Compant in CRM #1)  Time elapsed: 0.071 s  <<< ERROR!
+io.cucumber.core.runner.AmbiguousStepDefinitionsException: 
+"user enters tax amount 20" matches more than one step definition:
+  "user enters tax amount {double}" in stepdefinitions.AdactinLoginDefinitions.user_enters_tax_amount(java.lang.Double)
+  "user enters tax amount {int}" in stepdefinitions.AdactinLoginDefinitions.user_enters_tax_amount(java.lang.Integer)
+
+TestRunner.AmazonTest  Time elapsed: 23.568 s  <<< ERROR!
+java.lang.RuntimeException: java.net.ConnectException: Connection timed out: connect
+Caused by: java.net.ConnectException: Connection timed out: connect
+
