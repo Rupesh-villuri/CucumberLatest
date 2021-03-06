@@ -62,4 +62,8 @@ public class RegularExpressions {
 	public void order_id_is_and_username_is(Integer int1, String string) {
 
 	}
+	@Then("user closes session")
+	public void user_closes_session() {
+	  
+	}
 }
